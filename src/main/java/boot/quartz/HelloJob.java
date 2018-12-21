@@ -68,6 +68,11 @@ public class HelloJob implements Job {
         throws JobExecutionException {
         // Say Hello to the World and display the date/time
         _log.info("=======Hello World! - " + new Date());
+        try {
+            Thread.sleep(11000l);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }

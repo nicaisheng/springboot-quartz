@@ -22,7 +22,7 @@ import java.util.Map;
  * Created by nicaisheng on 17/3/23.
  */
 @Slf4j
-@Component
+//@Component
 public class JobLoaderTask {
 
     @Autowired

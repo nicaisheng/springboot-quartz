@@ -25,8 +25,8 @@ public class SampleController {
     @Inject
     Environment env;
 
-    @Resource
-    private JdbcTemplate jdbcTemplate;
+//    @Resource
+//    private JdbcTemplate jdbcTemplate;
 
     @Value("${jdbc.driverClass}")
     public String driverclass;
@@ -51,20 +51,20 @@ public class SampleController {
         return driverclass;
     }
 
-    @RequestMapping("/tasks")
-    @ResponseBody
-    Object tasks() {
-        String sql = "SELECT * from app_user";
-        return jdbcTemplate.query(sql, new RowMapper<Object>() {
-
-            @Override
-            public Object mapRow(ResultSet resultSet, int i) throws SQLException {
-                Map<String,Object> map = new HashMap<String,Object>();
-                map.put("app_id",resultSet.getString("app_id"));
-                map.put("app_secret",resultSet.getString("app_secret"));
-                return map;
-            }
-        });
-    }
+//    @RequestMapping("/tasks")
+//    @ResponseBody
+//    Object tasks() {
+//        String sql = "SELECT * from app_user";
+//        return jdbcTemplate.query(sql, new RowMapper<Object>() {
+//
+//            @Override
+//            public Object mapRow(ResultSet resultSet, int i) throws SQLException {
+//                Map<String,Object> map = new HashMap<String,Object>();
+//                map.put("app_id",resultSet.getString("app_id"));
+//                map.put("app_secret",resultSet.getString("app_secret"));
+//                return map;
+//            }
+//        });
+//    }
 
 }

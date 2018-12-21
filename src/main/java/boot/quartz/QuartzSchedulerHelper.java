@@ -13,7 +13,7 @@ import static org.quartz.CronScheduleBuilder.cronSchedule;
  * Created by nicaisheng on 17/3/23.
  */
 @Slf4j
-@Component
+//@Component
 public class QuartzSchedulerHelper {
 
     @Autowired
